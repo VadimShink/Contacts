@@ -21,8 +21,8 @@ extension Person {
         
         var persons: [Person] = []
         
-        let names = DataManager.shared.names.shuffled()
-        let surnames = DataManager.shared.surnames.shuffled()
+        let names = DataManager.shared.names
+        let surnames = DataManager.shared.surnames
         let emails = DataManager.shared.emails.shuffled()
         let phones = DataManager.shared.phones.shuffled()
         
@@ -37,4 +37,9 @@ extension Person {
         }
         return persons
     }
+}
+
+enum Contacts: String {
+    case phone = "phone"
+    case email = "tray"
 }
